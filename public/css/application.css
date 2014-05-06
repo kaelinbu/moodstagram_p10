@@ -1,0 +1,23 @@
+.navbar {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  text-align: center;
+}
+
+th {
+  text-align: left;
+}
+
+.images img {
+  width: 200px;
+}
+
+.choices p {
+  text-align: center;
+}
+
+.choices button {
+  border-radius: 2px;
+  margin-left: 10px
+}
