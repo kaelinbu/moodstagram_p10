@@ -38,11 +38,11 @@ configure do
 end
 
 
-# env_config = YAML.load_file(APP_ROOT.join('config', 'instagram.yaml'))
+env_config = YAML.load_file(APP_ROOT.join('config', 'instagram.yaml'))
 
-# env_config.each do |key, value|
-#   ENV[key]=value
-# end
+env_config.each do |key, value|
+  ENV[key]=value
+end
 
 # Set up the controllers and helpers
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }
