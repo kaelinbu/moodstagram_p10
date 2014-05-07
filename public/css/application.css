@@ -1,23 +1,59 @@
-.navbar {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  text-align: center;
+/*BACKGROUND AND LOGO*/
+body {
+  background-image: url('/images/left_logo.png');
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
 }
 
-th {
-  text-align: left;
+/*IMAGES DISPLAYED*/
+.images {
+  display: block;
+  width: 100%;
 }
+
+.images div {
+  margin: 0px auto;
+  width: 90%;
+*/}
 
 .images img {
   width: 200px;
+  margin: 1.5%;
+  float: left;
 }
 
-.choices p {
-  text-align: center;
+.images p {
+  display: inline;
+}
+
+/*INSTRUCTIONS*/
+.choose p{
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 30px;
+  position: absolute;
+  right: 0px;
+  width:300px;
+  margin-right: 25px;
+}
+
+/*MOOD OPTION BUTTONS*/
+.choices {
+  display: block;
+  float: right;
+  margin-right: 10px;
+  width: 100%;
 }
 
 .choices button {
   border-radius: 2px;
-  margin-left: 10px
+  background-color: #97DE91;
+  border: none;
+  font-family: 'Economica', sans-serif;
+  font-size: 24px;
+  margin: 30px;
+  margin-top: 75px;
+  float:right;
 }

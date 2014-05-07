@@ -18,4 +18,5 @@ function getImages(event) {
 
 function showImage(a) {
   $('.images').append(a);
+  // $('.images').tilesGallery();
 }
