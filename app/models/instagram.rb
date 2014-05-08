@@ -11,10 +11,13 @@ module Instagram
     end
 
     def checkAndCreateImages(responseHash, keyword)
-      if Image.find_by_url(responseHash[:url]) == nil
-       responseHash["data"].map {|post| Image.create(tag: keyword, url: post["images"]["standard_resolution"]["url"])}
-     end
+        #above is not verifying for unique urls- maybe because it needs to iterate through responseHash?
+        responseHash["data"].map do |post|
+          if Image.find_by_url(post["images"]["standard_resolution"]["url"]) == nil
+            Image.create(tag: keyword, url: post["images"]["standard_resolution"]["url"])
+          end
+        end
+      end
     end
   end
-end
 
