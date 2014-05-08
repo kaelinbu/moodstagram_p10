@@ -132,3 +132,8 @@ task "console" do
 end
 
 task :default  => :spec
+
+desc "Update database with more images with Heroku scheduler add-on"
+task :update_images => :environment do
+  Instagram::Client.get_images("happy")
+end

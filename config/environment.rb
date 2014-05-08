@@ -37,6 +37,7 @@ configure do
   set :views, File.join(Sinatra::Application.root, "app", "views")
 end
 
+
 env_config = YAML.load_file(APP_ROOT.join('config', 'instagram.yaml'))
 
 env_config.each do |key, value|
