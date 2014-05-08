@@ -1,14 +1,16 @@
 <div class="choose">
 <!--   <img src='/images/choose_button.png' alt="choose your mood">
  -->
- <p>Choose your mood:</p>
+ <p>I'm feeling...</p>
 </div>
 
-<section class="choices">
-  <% @choices.each do |choice, tag| %>
-  <button id="<%=choice%>"><%=tag%></button>
-  <% end %>
-</section>
+<div class="button_nav">
+  <section class="choices">
+    <% @choices.each do |choice, tag| %>
+    <button id="<%=choice%>"><%=tag%></button>
+    <% end %>
+  </section>
+</div>
 
 <div class="images">
 

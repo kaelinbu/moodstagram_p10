@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  $('button').on('click', getImages);
-
+  $('.button_nav').on('click','button', getImages);
+  $('.button_nav').on('click', 'button', updateButtons);
 });
 
 function getImages(event) {
@@ -18,5 +18,18 @@ function getImages(event) {
 
 function showImage(a) {
   $('.images').append(a);
-  // $('.images').tilesGallery();
+}
+
+function updateButtons(event) {
+
+  var request = $.ajax({
+    url: '/update',
+    type: 'GET'
+  });
+
+  request.done(showNewButtons);
+}
+
+function showNewButtons(a) {
+  $('.choices').replaceWith(a);
 }
