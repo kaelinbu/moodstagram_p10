@@ -10,24 +10,31 @@ body {
 /*IMAGES DISPLAYED*/
 .images {
   display: block;
-  width: 100%;
+  width: 928px;
+  height: 928px;
+  margin: 0px auto;
 }
 
 .images div {
   margin: 0px auto;
   width: 90%;
-*/}
+}
 
 .images img {
   width: 200px;
-  margin: 1.5%;
-  float: left;
+  margin: 0;
 }
 
 .images p {
   display: inline;
+  margin: 0;
 }
 
+/*#keyword {
+  position: relative;
+  z-index: 2;
+}
+*/
 /*INSTRUCTIONS*/
 .choose p{
   color: white;
