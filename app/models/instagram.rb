@@ -5,16 +5,19 @@ module Instagram
 
     def get_images(keyword)
       response = self.class.get("/v1/tags/#{keyword}/media/recent?client_id="+ENV['INSTAGRAM_KEY'],
-        :query => {count:30,
-                    max_id: 1399377631050085}
-                    # max_id = ["pagination"]["next_max_tag_id"]- can interate through a given number of times to get multiple pages
+        :query => {}
         )
-      parseForImages(response, keyword)
+      checkAndCreateImages(response,keyword)
     end
 
-    def parseForImages(responseHash, keyword)
-      return responseHash["data"].map {|post| Image.create(tag: keyword, url: post["images"]["standard_resolution"]["url"])}
+    def checkAndCreateImages(responseHash, keyword)
+        #above is not verifying for unique urls- maybe because it needs to iterate through responseHash?
+        responseHash["data"].map do |post|
+          if Image.find_by_url(post["images"]["standard_resolution"]["url"]) == nil
+            Image.create(tag: keyword, url: post["images"]["standard_resolution"]["url"])
+          end
+        end
+      end
     end
   end
-end
 

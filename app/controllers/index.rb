@@ -6,7 +6,8 @@ end
 
 get '/images' do
   @keyword = params[:tag]
-  @images = Image.where(tag: @keyword).map {|image| image.url}
+  @images = Image.where(tag: @keyword).shuffle.first(20)
+  @images.map! {|image| image.url}
   if @images.empty?
     client = Instagram::Client.new
     @images = client.get_images(@keyword)
