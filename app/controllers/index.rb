@@ -1,6 +1,7 @@
 require 'httparty'
 
 get '/' do
+  @choices = ChoiceRetriever.return_choices
   erb :index
 end
 
@@ -17,3 +18,7 @@ get '/images' do
   erb :_images, layout: false
 end
 
+get '/update' do
+  @choices = ChoiceRetriever.return_choices
+  erb :_buttons, layout: false
+end

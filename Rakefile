@@ -135,9 +135,9 @@ task :default  => :spec
 
 desc "Update database with more images with Heroku scheduler add-on"
 task :update_images do
-  keywords = ["happy", "friendly", "peaceful", "grateful", "selfie", "love"]
+  keywords = ChoiceRetriever.return_all
   #how can i have this set of keywords automatically generated and updated from the ids in index.erb?
-  keywords.each do |word|
+  keywords.each_key do |word|
     client = Instagram::Client.new
     client.get_images(word)
   end
