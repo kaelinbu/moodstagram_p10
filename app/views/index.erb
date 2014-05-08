@@ -5,12 +5,9 @@
 </div>
 
 <section class="choices">
-  <button id="happy">HAPPY</button>
-  <button id="friendly">FRIENDLY</button>
-  <button id="peaceful">PEACEFUL</button>
-  <button id="grateful">GRATEFUL</button>
-  <button id="selfie">SELF CENTERED</button>
-  <button id="love">LOVEY</button>
+  <% @choices.each do |choice, tag| %>
+  <button id="<%=choice%>"><%=tag%></button>
+  <% end %>
 </section>
 
 <div class="images">
