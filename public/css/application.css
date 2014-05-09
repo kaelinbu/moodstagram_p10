@@ -7,6 +7,13 @@ body {
   background-size: 100%;
 }
 
+p, a {
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 30px;
+  text-decoration: none;
+}
+
 /*IMAGES DISPLAYED*/
 .images {
   display: block;
@@ -36,15 +43,13 @@ body {
 }
 */
 /*INSTRUCTIONS*/
-.choose p{
-  color: white;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 30px;
+.choose p {
   position: absolute;
   right: 0px;
   width:300px;
   margin-right: 25px;
 }
+
 
 /*MOOD OPTION BUTTONS*/
 .choices {
@@ -52,6 +57,7 @@ body {
   float: right;
   margin-right: 10px;
   width: 100%;
+  margin-bottom: 70px;
 }
 
 .choices button {
@@ -63,4 +69,16 @@ body {
   margin: 30px;
   margin-top: 75px;
   float:right;
+}
+
+/*LOGIN*/
+
+.login {
+  text-align: center;
+  padding: 25px;
+}
+
+#logout {
+  text-align: right;
+  margin-right: 10px;
 }

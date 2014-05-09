@@ -1,20 +1,30 @@
-<div class="choose">
-<!--   <img src='/images/choose_button.png' alt="choose your mood">
- -->
- <p>I'm feeling...</p>
-</div>
+<% if session[:access_token] %>
+  <div class="choose">
+   <p>I'm feeling...</p>
+  </div>
 
-<div class="button_nav">
-  <section class="choices">
-    <% @choices.each do |choice, tag| %>
-    <button id="<%=choice%>"><%=tag%></button>
-    <% end %>
-  </section>
-</div>
+  <div class="button_nav">
+    <section class="choices">
+      <% @choices.each do |choice, tag| %>
+      <button id="<%=choice%>"><%=tag%></button>
+      <% end %>
+    </section>
+  </div>
 
-<a href="/oauth/connect">Connect with Instagram</a>
+  <div class="images">
+    <p id="keyword"></p>
+  </div>
+
+  <p id="logout"><a href="/logout">Logout</a></p>
+<% end %>
+
+<% if !session[:access_token] %>
+  <div class="login">
+    <p>Welcome! Login and let's get moody.</p>
+    <a href="/oauth/connect"><img id='login' src='/images/login_button.jpg' alt='login with instagram'></a>
+   </div>
+<% end %>
 
 
-<div class="images">
-  <p id="keyword"></p>
-</div>
+
+

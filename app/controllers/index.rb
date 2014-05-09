@@ -41,3 +41,8 @@ get "/oauth/callback" do
   session[:access_token] = response.access_token
   redirect "/"
 end
+
+get "/logout" do
+  session[:access_token] = nil
+  redirect '/'
+end
