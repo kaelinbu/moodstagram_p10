@@ -15,7 +15,12 @@ class ChoiceRetriever
               cuteness: "CUTE DEPRIVED",
               bromance: "BRO LOVE",
               wedding: "PINTERESTY",
-              wordstoliveby: "LOQUACIOUS"}
+              wordstoliveby: "LOQUACIOUS",
+              geek: "GEEKY",
+              ohyoufancyhuh: "FANCY",
+              cray: "CRAZY",
+              adventure: "ADVENTUROUS",
+              travel: "WANDERLUST"}
 
   def self.return_all
     @choices

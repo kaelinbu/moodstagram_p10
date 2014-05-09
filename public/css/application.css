@@ -52,6 +52,7 @@ body {
   float: right;
   margin-right: 10px;
   width: 100%;
+  margin-bottom: 60px;
 }
 
 .choices button {
@@ -63,4 +64,11 @@ body {
   margin: 30px;
   margin-top: 75px;
   float:right;
+}
+
+/*COLLAGE TITLE*/
+p {
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 30px;
 }
