@@ -15,7 +15,6 @@ gem 'activesupport'
 gem 'activerecord'
 
 gem 'rake'
-gem 'instagram'
 gem 'shotgun'
 
 group :test do
