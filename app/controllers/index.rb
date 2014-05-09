@@ -1,6 +1,7 @@
 # require 'httparty'
 
 get '/' do
+  @choices = ChoiceRetriever.return_choices
   erb :index
 end
 
