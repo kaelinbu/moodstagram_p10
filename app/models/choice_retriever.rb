@@ -27,7 +27,8 @@ class ChoiceRetriever
   end
 
   def self.return_choices
-    @choices = @choices.to_a.sample(6)
+    @choices.to_a.sample(6)
   end
 
 end
+
