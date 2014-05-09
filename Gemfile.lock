@@ -39,6 +39,7 @@ GEM
     multi_xml (0.5.5)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
+    oauth (0.4.7)
     pg (0.14.1)
     rack (1.5.2)
     rack-protection (1.5.0)
@@ -88,6 +89,7 @@ DEPENDENCIES
   factory_girl
   faker
   httparty
+  oauth
   pg
   rack-test
   rake
